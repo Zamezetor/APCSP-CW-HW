@@ -5,56 +5,48 @@
 # Variables
 # Functions
 def Choice():
-    print("(1)\tA Triangle")
-    print("(2)\tA Rectangle")
-    print("(3)\tA Trapezoid")
-    print("(4)\tA Parallelogram")
-    """
-    print("(5)\tA General Quadrilateral")
-    print("(6)\tA N-gon")"""
+    print("(1)\tA Triangle \n (2)\tA Rectangle \n (3)\tA Trapezoid \n (4)\tA Parallelogram \n ")
+    """(5)\tA General Quadrilateral \n (6)\tA N-gon")"""
     print("Please Utilize The Number Assigned To The Shape")
 
     
 def Triangle(units):
-    print("Please Input The Width Of The Triangle")
-    width = float(input())
-    print("Please Input The Height Of The Triangle")
-    height = float(input())
+    width = float(input("Please Input The Width Of The Triangle \n"))
+    height = float(input("Please Input The Height Of The Triangle \n"))
     print("Please Wait While We Calculate")
     volume = float((width*height)/2)
-    print("The Volume is " + str(volume) + " " + units + " Squared")
+    print(f"The Volume is {volume} {units} Squared")
 
 
 def Rectangle(units):
-    print("Please Input The Width Of The Rectangle")
-    width = float(input())
-    print("Please Input The Length Of The Rectangle")
+    width = float(input("Please Input The Width Of The Rectangle \n"))
+    print("Please Input The Length Of The Rectangle \n")
     height = float(input())
     print("Please Wait While We Calculate")
     volume = float((width*height))
-    print("The Volume is " + str(volume) + " " + units + " Squared")
+    print(f"The Volume is {volume} {units} Squared")
 
 
 def Parallelogram(units):
-    print("Please Input The Width Of The Parallelogram")
+    print("Please Input The Width Of The Parallelogram \n")
     width = float(input())
-    print("Please Input The Height Of The Parallelogram")
+    print("Please Input The Height Of The Parallelogram \n")
     height = float(input())
     print("Please Wait While We Calculate")
     volume = float((width*height))
-    print("The Volume is " + str(volume) + " " + units + " Squared")
+    print(f"The Volume is {volume} {units} Squared")
 
 
 def Trapezoid(units):
-    print("Please Input The First Base Of The Trapezoid")
+    print("Please Input The First Base Of The Trapezoid \n")
     base_1 = float(input())
-    print("Please Input The Second Base Of The Trapezoid")
+    print("Please Input The Second Base Of The Trapezoid \n")
     base_2 = float(input())
     print("Please Input The Height Of The Trapezoid")
     height = float(input())
     print("Please Wait While We Calculate")
     volume = float(((base_1+base_2)/2)*height)
-    print("The Volume is " + str(volume) + " " + units + " Squared")
+    print(f"The Volume is {volume} {units} Squared")
 
 
 """
@@ -73,39 +65,39 @@ def AskShape():
     
 
 def AskUnit():
-    print("\nPlease Confirm The Units Used For The Measurements Are The Same")
-    print("Then Input The Units Used For Measurements")
+    print("\nPlease Confirm The Units Used For The Measurements Are The Same"
+          "Then Input The Units Used For Measurements")
     return str(input())
 
 
 def ShapeCheck(shape,units):
-    if shape.lower().__contains__("1"):
+    if ("1" or "tri") in  shape.lower():
         print("Calculating Area Of Triangle")
         Triangle(units)
         print("Thank You")
         exit
-    elif shape.lower().__contains__("2"):
+    elif ("2" or "rec") in  shape.lower():
         print("Calculating Area Of Rectangle")
         Rectangle(units)
         print("Thank You")
         exit
-    elif shape.lower().__contains__("3"):
+    elif ("3" or "para") in  shape.lower():
         print("Calculating Area Of Parallelogram")
         Parallelogram(units)
         print("Thank You")
         exit
-    elif shape.lower().__contains__("4"):
+    elif ("4" or "trap") in  shape.lower():
         print("Calculating Area Of Trapezoid")
         Trapezoid(units)
         print("Thank You")
         exit
         """
-    elif shape.lower().__contains__("5") or "Gen" in shape:
+    elif ("5" or "gen") in  shape.lower():
         print("Calculating Area Of A Generalized Qudrilateral")
         General_quad(units)
         print("Thank You")
         exit
-    elif shape.lower().__contains__("6") or "n-gon" in shape:
+    elif ("6" or "n" or "gon") in  shape.lower():
         print("Calculating Area Of N-Gon")
         N-Gon(units)
         print("Thank You")
