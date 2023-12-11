@@ -1,9 +1,9 @@
-#Logan White 11/16/2023
-#11/16/2023-Find_polygon.py
-#Classwork finds area of an inputed polygon 
-#CC BY-NC-SA 4.0
-#Variables
-#Functions
+# Logan White 11/16/2023
+# 11:16:2023-Find_polygon.py
+# Classwork - finds area of an inputed polygon 
+# CC BY-NC-SA 4.0
+# Variables
+# Functions
 def Choice():
     print("(1)\tA Triangle")
     print("(2)\tA Rectangle")
@@ -23,6 +23,8 @@ def Triangle(units):
     print("Please Wait While We Calculate")
     volume = float((width*height)/2)
     print("The Volume is " + str(volume) + " " + units + " Squared")
+
+
 def Rectangle(units):
     print("Please Input The Width Of The Rectangle")
     width = float(input())
@@ -31,6 +33,8 @@ def Rectangle(units):
     print("Please Wait While We Calculate")
     volume = float((width*height))
     print("The Volume is " + str(volume) + " " + units + " Squared")
+
+
 def Parallelogram(units):
     print("Please Input The Width Of The Parallelogram")
     width = float(input())
@@ -39,6 +43,8 @@ def Parallelogram(units):
     print("Please Wait While We Calculate")
     volume = float((width*height))
     print("The Volume is " + str(volume) + " " + units + " Squared")
+
+
 def Trapezoid(units):
     print("Please Input The First Base Of The Trapezoid")
     base_1 = float(input())
@@ -49,11 +55,15 @@ def Trapezoid(units):
     print("Please Wait While We Calculate")
     volume = float(((base_1+base_2)/2)*height)
     print("The Volume is " + str(volume) + " " + units + " Squared")
+
+
 """
 def General_quad(units):
+    pass
+
 
 def N-Gon(units):
-
+    pass
     """
 
 def AskShape():
@@ -61,10 +71,12 @@ def AskShape():
     Choice()
     return (input())
     
+
 def AskUnit():
     print("\nPlease Confirm The Units Used For The Measurements Are The Same")
     print("Then Input The Units Used For Measurements")
     return str(input())
+
 
 def ShapeCheck(shape,units):
     if shape.lower().__contains__("1"):
@@ -103,10 +115,13 @@ def ShapeCheck(shape,units):
         Choice()
         main()
 
+
 def main():
     units = AskUnit()
     shape = AskShape()
     ShapeCheck(shape,units)
+
+
 #Code
 main()
 
